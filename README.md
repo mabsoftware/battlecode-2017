@@ -1,3 +1,13 @@
+Team CowPi Battlecode Project
+===========================
+Note to contributors:
+Please checkout your own branch of the project using the command
+git checkout -b [ your name ].
+For example:
+git checkout -b Max.
+Please push first to your branch and then submit a pull request to be
+merged to master.
+
 Battlecode Project Scaffold
 ===========================
 
