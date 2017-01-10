@@ -13,9 +13,9 @@ Possible strategies
 ===========================
 
 - Scout defence
-    Use the scout's large bullet sight and fast movement to quickly shield trees from bullets
+Use the scout's large bullet sight and fast movement to quickly shield trees from bullets
 - Tree grid
-    Farm grid like so:
+Farm grid like so:
     
     - TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE etc.
     - TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE etc.
