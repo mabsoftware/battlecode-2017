@@ -12,9 +12,9 @@ merged to master.
 Possible strategies
 ===========================
 
-- Scout defence
+- Scout defence: 
 Use the scout's large bullet sight and fast movement to quickly shield trees from bullets
-- Tree grid
+- Tree grid: 
 Farm grid like so:
     
     - TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE etc.
