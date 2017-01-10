@@ -8,6 +8,24 @@ git checkout -b Max.
 Please push first to your branch and then submit a pull request to be
 merged to master.
 
+
+Possible strategies
+===========================
+
+- Scout defence
+    Use the scout's large bullet sight and fast movement to quickly shield trees from bullets
+- Tree grid
+    Farm grid like so:
+    
+    - TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE etc.
+    - TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE etc.
+    - TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE TREE GARDENER TREE etc.
+    - etc.
+    
+    Where each gardener is stationary and is in charge of two trees to water.
+    Gardeners on the edges also build robots when necessary.
+
+
 Battlecode Project Scaffold
 ===========================
 
