@@ -1,3 +1,14 @@
+Helpful links
+===========================
+
+General Information
+
+http://s3.amazonaws.com/battlecode-releases-2017/releases/specs-1.0.0.html#bcd11
+
+Class index
+
+http://s3.amazonaws.com/battlecode-releases-2017/releases/javadoc/index.html
+
 
 Possible strategies
 ===========================
