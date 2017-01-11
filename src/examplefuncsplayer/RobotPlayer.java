@@ -1,4 +1,4 @@
-// Example Player
+// Example player
 
 package examplefuncsplayer;
 import battlecode.common.*;
