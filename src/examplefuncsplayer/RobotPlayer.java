@@ -1,5 +1,3 @@
-// Example player
-
 package examplefuncsplayer;
 import battlecode.common.*;
 
@@ -61,7 +59,7 @@ public strictfp class RobotPlayer {
                 rc.broadcast(1,(int)myLocation.y);
 
                 // Clock.yield() makes the robot wait until the next turn, then it will perform this loop again
-                Clock.yield();
+           //     Clock.yield();
 
             } catch (Exception e) {
                 System.out.println("Archon Exception");
@@ -88,7 +86,7 @@ public strictfp class RobotPlayer {
                 Direction dir = randomDirection();
 
                 // Randomly attempt to build a soldier or lumberjack in this direction
-                if (rc.canBuildRobot(RobotType.SOLDIER, dir) && Math.random() < .01) {
+                if (rc.canBuildRobot(RobotType.SOLDIER, dir)) {
                     rc.buildRobot(RobotType.SOLDIER, dir);
                 } else if (rc.canBuildRobot(RobotType.LUMBERJACK, dir) && Math.random() < .01 && rc.isBuildReady()) {
                     rc.buildRobot(RobotType.LUMBERJACK, dir);

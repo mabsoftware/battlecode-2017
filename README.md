@@ -1,13 +1,3 @@
-Team CowPi Battlecode Project
-===========================
-Note to contributors:
-Please checkout your own branch of the project using the command
-git checkout -b [ your name ].
-For example:
-git checkout -b Max.
-Please push first to your branch and then submit a pull request to be
-merged to master.
-
 Battlecode Project Scaffold
 ===========================
 
@@ -163,9 +153,6 @@ If you get errors while trying to execute Gradle tasks, make sure that you do no
 - You're good to go. Run `gradle -q tasks` to see the other Gradle build
   tasks available. You shouldn't need to use any tasks outside of the "battlecode" group.
 
-- To run a match, use the following command:
-  `
-
 
 ## Writing Players
 
@@ -181,7 +168,7 @@ This year, you can store your code in packages as you like; the only restriction
 
 ### Local
 
-After downloading the client using `gradle unpackGradle`, there will be a folder `client/` which holds the app for running matches. Double click this application to open it; you are now looking at the game client for Battlecode 2017! **NOTE: Do not move any application files in the `client` folder, as you may lose the ability to run matches properly!**
+Following the instructions above should download a client into the `client` folder (using `gradle unpackClient` if you don't see it). This is the app for running matches. Double click this application to open it; you are now looking at the game client for Battlecode 2017! **NOTE: Do not move any application files in the `client` folder, as you may lose the ability to run matches properly!**
 
 #### Client Basics
 
