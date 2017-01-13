@@ -3,6 +3,7 @@ import battlecode.common.*;
 
 public strictfp class RobotPlayer {
     static RobotController rc;
+    static int numGardSpawn = 0;
 
     /**
      * run() is the method that is called when a robot is instantiated in the Battlecode world.
@@ -46,8 +47,9 @@ public strictfp class RobotPlayer {
                 Direction dir = randomDirection();
 
                 // Randomly attempt to build a gardener in this direction
-                if (rc.canHireGardener(dir) && Math.random() < .01) {
+                if (rc.canHireGardener(dir) && numGardSpawn < 3) {
                     rc.hireGardener(dir);
+                    numGardSpawn++;
                 }
 
                 // Move randomly
@@ -85,11 +87,9 @@ public strictfp class RobotPlayer {
                 // Generate a random direction
                 Direction dir = randomDirection();
 
-                // Randomly attempt to build a soldier or lumberjack in this direction
-                if (rc.canBuildRobot(RobotType.SOLDIER, dir)) {
-                    rc.buildRobot(RobotType.SOLDIER, dir);
-                } else if (rc.canBuildRobot(RobotType.LUMBERJACK, dir) && Math.random() < .01 && rc.isBuildReady()) {
-                    rc.buildRobot(RobotType.LUMBERJACK, dir);
+                // Attempt to build a tree
+                if (canPlantTree(Direction dir)) {
+                    rc.plantTree(Direction dir);
                 }
 
                 // Move randomly
