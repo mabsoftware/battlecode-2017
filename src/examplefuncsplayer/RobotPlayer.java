@@ -3,7 +3,6 @@ import battlecode.common.*;
 
 public strictfp class RobotPlayer {
     static RobotController rc;
-    static int numGardSpawn = 0;
 
     /**
      * run() is the method that is called when a robot is instantiated in the Battlecode world.
@@ -47,9 +46,8 @@ public strictfp class RobotPlayer {
                 Direction dir = randomDirection();
 
                 // Randomly attempt to build a gardener in this direction
-                if (rc.canHireGardener(dir) && numGardSpawn < 3) {
+                if (rc.canHireGardener(dir) && Math.random() < .01) {
                     rc.hireGardener(dir);
-                    numGardSpawn++;
                 }
 
                 // Move randomly
@@ -61,7 +59,7 @@ public strictfp class RobotPlayer {
                 rc.broadcast(1,(int)myLocation.y);
 
                 // Clock.yield() makes the robot wait until the next turn, then it will perform this loop again
-           //     Clock.yield();
+                Clock.yield();
 
             } catch (Exception e) {
                 System.out.println("Archon Exception");
@@ -87,10 +85,13 @@ public strictfp class RobotPlayer {
                 // Generate a random direction
                 Direction dir = randomDirection();
 
-                // Attempt to build a tree
-                if (canPlantTree(Direction dir)) {
-                    rc.plantTree(Direction dir);
+                // Randomly attempt to build a soldier or lumberjack in this direction
+                if (rc.canPlantTree(dir) && Math.random() < .01) {
+                    rc.plantTree(dir);
                 }
+ //               } else if (rc.canBuildRobot(RobotType.LUMBERJACK, dir) && Math.random() < .01 && rc.isBuildReady()) {
+   //                 rc.buildRobot(RobotType.LUMBERJACK, dir);
+     //           }
 
                 // Move randomly
                 tryMove(randomDirection());
