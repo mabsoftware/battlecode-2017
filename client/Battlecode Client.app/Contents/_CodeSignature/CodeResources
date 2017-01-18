@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/app.asar</key>
 		<data>
-		36idu66CUQ6KeVDFSvjSFnsLIfo=
+		V21HboWRsirq2DwbKWCe/V/HkEA=
 		</data>
 		<key>Resources/electron.asar</key>
 		<data>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			L+CY7SlcuOjjG5qevbRFF2fFNIg=
+			5kGvBLwsdBPG3swxvmYsAHObK+A=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.github.electron.framework" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = VFZ2XDFJE7</string>
@@ -77,7 +77,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			nFAQQ58C7tw2fXp68YTD9zzAuBk=
+			LGKnjq35/0WGCDLGAHx3ufiF9hI=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.github.Squirrel" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = VFZ2XDFJE7</string>
@@ -86,11 +86,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			36idu66CUQ6KeVDFSvjSFnsLIfo=
+			V21HboWRsirq2DwbKWCe/V/HkEA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Obh1mGGapCOKnlawsdf1oA4AjC7DUfCGwzeP68J+ys=
+			kh2xdLVBzqiJrAHlOwrURS01O6x2X2+ekSOUnxifp2E=
 			</data>
 		</dict>
 		<key>Resources/electron.asar</key>
