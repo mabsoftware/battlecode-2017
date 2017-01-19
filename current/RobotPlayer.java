@@ -1,4 +1,6 @@
-// Example player
+/* Current Robot Player (competition ready) *
+ * 
+ */
 
 package current;
 import battlecode.common.*;
