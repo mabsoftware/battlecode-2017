@@ -4,6 +4,7 @@ import battlecode.common.*;
 public strictfp class RobotPlayer {
     static RobotController rc;
     static int numGard = 0;
+    static int numTrees = 0;
     
     /**
      * run() is the method that is called when a robot is instantiated in the Battlecode world.
@@ -90,6 +91,7 @@ public strictfp class RobotPlayer {
                 // Randomly attempt to build a soldier or lumberjack in this direction
                 if (rc.canPlantTree(dir)) {
                     rc.plantTree(dir);
+                    numTrees++;
                 }
  //               } else if (rc.canBuildRobot(RobotType.LUMBERJACK, dir) && Math.random() < .01 && rc.isBuildReady()) {
    //                 rc.buildRobot(RobotType.LUMBERJACK, dir);
