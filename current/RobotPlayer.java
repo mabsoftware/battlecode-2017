@@ -1,6 +1,7 @@
-/* Current Robot Player (competition ready) *
- * 
- */
+/*********************************************
+ *  Current Robot Player (competition ready) *
+ *  Version: 1/23/17                         *
+ *********************************************/
 
 package current;
 import battlecode.common.*;
@@ -40,8 +41,6 @@ public strictfp class RobotPlayer {
 	}
 
     static void runArchon() throws GameActionException {
-        System.out.println("I'm an archon!");
-
         // The code you want your robot to perform every round should be in this loop
         while (true) {
 
@@ -49,16 +48,15 @@ public strictfp class RobotPlayer {
     }
 
 	static void runGardener() throws GameActionException {
-        System.out.println("I'm a gardener!");
-
         // The code you want your robot to perform every round should be in this loop
         while (true) {
         }
     }
 
     static void runSoldier() throws GameActionException {
-        System.out.println("I'm an soldier!");
-
+    	Team enemy = rc.getTeam().opponent();
+    	MapLocation myLocation = rc.getLocation();
+    	RobotInfo[] enemies = rc.senseNearbyRobots(-1, enemy);
         // The code you want your robot to perform every round should be in this loop
         while (true) {
         	
@@ -66,8 +64,6 @@ public strictfp class RobotPlayer {
     }
 
     static void runLumberjack() throws GameActionException {
-        System.out.println("I'm a lumberjack!");
-
         // The code you want your robot to perform every round should be in this loop
         while (true) {
 
