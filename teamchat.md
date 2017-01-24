@@ -17,7 +17,7 @@ Possible strategies
 Use the scout's large bullet sight and fast movement to quickly shield trees from bullets
 
 THIS IS A TEST, I DON'T KNOW WHAT WILL HAPPEN
-
+Update: This is a terrible idea; scouts can only block 2 bullets from a tank and then they will die!
 
 ## Tree grid
 Farm grid like so:
