@@ -84,18 +84,19 @@ public strictfp class RobotPlayer {
                 // Generate a random direction
                 Direction dir = randomDirection();
 
-                // Randomly attempt to build a soldier or lumberjack in this direction
                 if (rc.canBuildRobot(RobotType.SOLDIER, dir)) {
                     rc.buildRobot(RobotType.SOLDIER, dir);
                 }
-                // Clock.yield() makes the robot wait until the next turn, then it will perform this loop again
-                Clock.yield();
+                else {
+                	// START FARMING HERE
+                }
+                
+                Clock.yield(); // wait until next turn
 
             } catch (Exception e) {
                 System.out.println("Gardener Exception");
                 e.printStackTrace();
             }
-        	// start farming here
         }
     }
 
@@ -114,6 +115,11 @@ public strictfp class RobotPlayer {
         while (true) {
 
         }
+    }
+    
+    static void movetoLocation(MapLocation l) {
+    	// write a method to move the robot to location l, avoiding obstacles
+    	// if he encounters opponents, attack
     }
     
     static Direction randomDirection() {
