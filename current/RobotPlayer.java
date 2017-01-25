@@ -5,6 +5,7 @@
 
 package current;
 import battlecode.common.*;
+import battlecode.*;
 
 public strictfp class RobotPlayer {
     static RobotController rc;
@@ -106,7 +107,10 @@ public strictfp class RobotPlayer {
     	RobotInfo[] enemies = rc.senseNearbyRobots(-1, enemy);
         // The code you want your robot to perform every round should be in this loop
         while (true) {
-        	
+        	if (rc.canMove(new Direction((float) (7 * Math.PI / 4)))) {
+        		rc.move(new Direction((float) (7 * Math.PI / 4)));
+        	}
+        	Clock.yield();
         }
     }
 
@@ -124,5 +128,10 @@ public strictfp class RobotPlayer {
     
     static Direction randomDirection() {
         return new Direction((float)Math.random() * 2 * (float)Math.PI);
+    }
+    
+    // Allows robots to fan out and make space for more robots
+    static void fanOut() {
+    	
     }
 }
