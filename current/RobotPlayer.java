@@ -88,6 +88,10 @@ public strictfp class RobotPlayer {
                 if (rc.canBuildRobot(RobotType.SOLDIER, dir)) {
                     rc.buildRobot(RobotType.SOLDIER, dir);
                 }
+                dir = randomDirection();
+                if (rc.canBuildRobot(RobotType.LUMBERJACK, dir)) {
+                	rc.buildRobot(RobotType.LUMBERJACK, dir);
+                }
                 else {
                 	// START FARMING HERE
                 }
@@ -102,22 +106,36 @@ public strictfp class RobotPlayer {
     }
 
     static void runSoldier() throws GameActionException {
+    	MapLocation center = new MapLocation(250, 250);
     	Team enemy = rc.getTeam().opponent();
-    	MapLocation myLocation = rc.getLocation();
-    	RobotInfo[] enemies = rc.senseNearbyRobots(-1, enemy);
-        // The code you want your robot to perform every round should be in this loop
+    	// The code you want your robot to perform every round should be in this loop
         while (true) {
-        	if (rc.canMove(new Direction((float) (7 * Math.PI / 4)))) {
-        		rc.move(new Direction((float) (7 * Math.PI / 4)));
+        	Direction towardsCenter = rc.getLocation().directionTo(center);
+        	if (rc.canMove(towardsCenter)) {
+        		rc.move(towardsCenter);
         	}
+        	RobotInfo[] enemies = rc.senseNearbyRobots(-1, enemy);
+
+            // If there are some...
+            if (enemies.length > 0) {
+                // And we have enough bullets, and haven't attacked yet this turn...
+                if (rc.canFireSingleShot()) {
+                    // ...Then fire a bullet in the direction of the enemy.
+                    rc.fireSingleShot(rc.getLocation().directionTo(enemies[0].location));
+                }
+            }
         	Clock.yield();
         }
     }
 
     static void runLumberjack() throws GameActionException {
         // The code you want your robot to perform every round should be in this loop
-        while (true) {
 
+        while (true) {
+        	Direction a = randomDirection();
+        	if (rc.canMove(a))
+        		rc.move(a);
+        	Clock.yield();
         }
     }
     
