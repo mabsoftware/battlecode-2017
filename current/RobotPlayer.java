@@ -1,11 +1,10 @@
-/*********************************************
- *  Current Robot Player (competition ready) *
- *  Version: 1/23/17                         *
- *********************************************/
+/**********************************************************************************************
+ *  Current Robot Player (competition ready)                                                  *
+ *  Version: 1/27/17                                                                          *
+ **********************************************************************************************/
 
 package current;
 import battlecode.common.*;
-import battlecode.*;
 
 public strictfp class RobotPlayer {
     static RobotController rc;
@@ -54,8 +53,6 @@ public strictfp class RobotPlayer {
                 if (rc.canHireGardener(dir)) {
                     rc.hireGardener(dir);
                 }
-
-                // Move randomly
 
                 // Broadcast archon's location for other robots on the team to know
                 MapLocation myLocation = rc.getLocation();
